@@ -17,12 +17,26 @@
         <!-- option 2 click event handler -->
          <button onclick="changeBg()">Click here to Change Background</button>
          <button onclick="makeRed()">Make Red</button>
+
+         <!-- option 3 get element by id or class then set onClick -->
+
          <button id="btn-blue">Make Pink</button>
          <button id="btn-purple">Make Purple</button>
          
-
+         <br>
+         <!-- option 4 addEventListner -->
+         <button id="make-salmon-btn">Make Salmon</button>
+         <button id="btn-cyan">Make Cyan</button>
+         <button id="mouse-move">Mouse Move</button>
          <script>
-            
+            // document.getElementById().addEventListner('event type', 'handler')
+            document.getElementById('make-salmon-btn').addEventListener('click', function makeSalmon(){
+                document.body.style.backgroundColor = 'salmon';
+            });
+
+            document.getElementById('btn-cyan').addEventListener('click', function cyanBtn(){
+                document.body.style.backgroundColor = 'cyan';
+            })
          </script>
     </main>
     <script src="js/events.js"></script>
