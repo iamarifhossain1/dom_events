@@ -7,7 +7,26 @@
   </head>
   <body>
     <h1>DOM Events Summary</h1>
-    <input type="text" placeholder="Write your name" style="padding: 5px" />
-    <button id="name">Add Name</button>
+    <input
+      id="name"
+      type="text"
+      placeholder="Write your name"
+      style="padding: 5px"
+    />
+    <button id="name-btn" onclick="addName()">Add Name</button>
+    <button id="name-btn2">Add Name2</button>
+    <div id="name-container"></div>
+
+    <script>
+      function addName() {
+        const nameInput = document.getElementById("name");
+        const newName = nameInput.value;
+        const nameContainer = document.getElementById("name-container");
+        const newPara = document.createElement("p");
+        newPara.innerText = newName;
+        nameContainer.appendChild(newPara);
+        nameInput.value = "";
+      }
+    </script>
   </body>
 </html>
