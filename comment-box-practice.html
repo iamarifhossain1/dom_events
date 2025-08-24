@@ -8,5 +8,55 @@
   </head>
   <body>
     <h1>My Comment Box</h1>
+    <div id="comment-div">
+      <p class="comment-paragraph">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor magnam
+        repellat, vel suscipit soluta ipsam eius debitis quisquam molestias
+        repudiandae. Modi, soluta? Quo nobis inventore ea quod vel deserunt
+        iste!
+      </p>
+      <p class="comment-paragraph">
+        Sequi eligendi magnam doloremque beatae. Minus inventore necessitatibus
+        praesentium sequi aperiam numquam perferendis delectus harum a
+        doloremque, in veniam odio quisquam vitae, molestias laudantium eius ab
+        ut expedita consequatur accusamus!
+      </p>
+      <p class="comment-paragraph">
+        Nam eveniet reiciendis pariatur architecto numquam officia, adipisci
+        tenetur quibusdam. Et iure consectetur officiis repellat, amet facilis
+        ratione? Quasi accusantium similique consequatur quidem! Et, aperiam
+        debitis dolores tempora enim perspiciatis.
+      </p>
+      <p class="comment-paragraph">
+        Incidunt exercitationem porro, consectetur laudantium, odit quas dolor
+        quibusdam quis quam nam saepe at ipsam adipisci autem totam et ab earum
+        consequatur, delectus repellat expedita? Laborum quidem impedit
+        voluptatum. Quis!
+      </p>
+    </div>
+    <textarea
+      name=""
+      id="comment-box"
+      cols="60"
+      rows="5"
+      placeholder="write your comments here"
+    ></textarea
+    ><br />
+    <button id="comment-btn">Add Comment</button>
+    <script>
+      const commentBtn = document
+        .getElementById("comment-btn")
+        .addEventListener("click", function () {
+          console.log("Button Clicked");
+          const commentBox = document.getElementById("comment-box");
+          const newComment = commentBox.value;
+          const commentContainer = document.getElementById("comment-div");
+          const newParagraph = document.createElement("p");
+          newParagraph.classList.add("comment-paragraph");
+          newParagraph.innerText = newComment;
+          commentContainer.appendChild(newParagraph);
+          commentBox.value = "";
+        });
+    </script>
   </body>
 </html>
